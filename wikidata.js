@@ -15,13 +15,13 @@ function dentsitateaEtaOrdenatu(lista) {
     aldatua[key].dentsitatea = aldatua[key].biztanleria / aldatua[key].azalera;
     // Udalerriaren izena gorde geroago sugerentzien prozesua simplifikatzeko
     udalerriak.push(aldatua[key].udalerriaLabel);
-  })
+  });
 
   // Azkenik bueltatu aldatutako ( dentsitatea dun ) datuak baino ordenatutak handienetik txikienera
   return aldatua.sort((a, b) => {
     // a : Lehengo elementua konparatzeko
     // b : Bigarren elementua konparatzeko
-    return b.dentsitatea - a.dentsitatea // JS-k integratuta daukan sort funtzioari esker prozesua errazten da
+    return b.dentsitatea - a.dentsitatea; // JS-k integratuta daukan sort funtzioari esker prozesua errazten da
   })
 }
 
@@ -101,7 +101,7 @@ window.onload = function () {
     while (child) {
       // Garbitu emaitzen elementua..
       emaitzak.removeChild(child);
-      child = emaitzak.lastElementChild
+      child = emaitzak.lastElementChild;
     }
     var kantitatea = 0;
     var aurkituta = false;
@@ -120,7 +120,7 @@ window.onload = function () {
     else {
       // Ez bada aurkit ( Hutsa delako edo ez delako existitzen ) saiatu sugerentziak ematen
       let hutsik = document.createElement("p");
-      hutsik.innerText = "Ezin izan da ezer aurkitu."
+      hutsik.innerText = "Ezin izan da ezer aurkitu.";
       if (sarrera.value.length > 3) {
         // Sarrera elementuan zerbait idatzita badegu ( 3 karaktere baino gehiago ) aztertu sugerentziak
         let luzera = sarrera.value.length;
